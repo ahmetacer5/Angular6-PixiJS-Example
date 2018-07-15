@@ -65,12 +65,12 @@ export class Character {
                 }
 
                 if (self.sprite.clickY > self.sprite.y) {
-                    self.sprite.rotation = 0;
+                    self.sprite.rotation = 0.5;
                     self.sprite.y += self.sprite.vmax;
                     walk_direction = 'down';
                 }
                 if (self.sprite.clickY < self.sprite.y) {
-                    self.sprite.rotation = 0;
+                    self.sprite.rotation = 0.5;
                     self.sprite.y -= self.sprite.vmax;
                     walk_direction = 'up';
                 }
