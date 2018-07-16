@@ -54,29 +54,47 @@ export class Character {
             if (Math.sqrt(dx * dx + dy * dy) > 5) {
 
                 if (self.sprite.clickX > self.sprite.x) {
-                    self.sprite.x += self.sprite.vmax;
                     self.sprite.rotation = 0;
+                    self.sprite.x += self.sprite.vmax;
                     walk_direction = 'right';
                 }
                 if (self.sprite.clickX < self.sprite.x) {
+                    
                     self.sprite.rotation = 0;
                     self.sprite.x -= self.sprite.vmax;
                     walk_direction = 'left';
                 }
 
                 if (self.sprite.clickY > self.sprite.y) {
-                    self.sprite.rotation = 0.5;
+              
+                    self.sprite.rotation = 0;
                     self.sprite.y += self.sprite.vmax;
                     walk_direction = 'down';
                 }
                 if (self.sprite.clickY < self.sprite.y) {
-                    self.sprite.rotation = 0.5;
+                
+                    self.sprite.rotation = 0;
                     self.sprite.y -= self.sprite.vmax;
                     walk_direction = 'up';
                 }
 
                 if (self.sprite.clickY < self.sprite.y && self.sprite.clickX < self.sprite.x) {
                     self.sprite.rotation = 0.5;
+                    walk_direction = 'left';
+                }
+ 
+                if (self.sprite.clickY > self.sprite.y && self.sprite.clickX > self.sprite.x) {
+                    self.sprite.rotation = 0.5;
+                    walk_direction = 'right';
+                }
+
+                if (self.sprite.clickY < self.sprite.y && self.sprite.clickX > self.sprite.x) {
+                    self.sprite.rotation = -0.5;
+                    walk_direction = 'right';
+                }
+
+                if (self.sprite.clickY > self.sprite.y && self.sprite.clickX < self.sprite.x) {
+                    self.sprite.rotation = -0.5;
                     walk_direction = 'left';
                 }
 

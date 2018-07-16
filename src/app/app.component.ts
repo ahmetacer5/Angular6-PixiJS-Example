@@ -42,7 +42,6 @@ export class AppComponent implements OnInit {
         const self = this;
         this.stage.interactive = true;
 
-<<<<<<< HEAD
         // const frameLocations = {
         //     stand_front: [0, 56],
         //     surprised_front: [192, 120],
@@ -161,17 +160,11 @@ export class AppComponent implements OnInit {
 
         for (let i = 0 ; i < 2 ; i++) {
             self.characters.push(new Character(PIXI, 'hero' + i, 2));
-=======
-
-        for (let i = 0 ; i < 1 ; i++) {
-            self.characters.push(new Character(PIXI, 'hero' + i, 5));
->>>>>>> eeaed51146f8091aa3d2cc2373323a4c41eccd99
         }
 
         document.getElementById('playGraoundWrapper').addEventListener('click', function (event) {
             const clickX = event.clientX - playGraoundWrapper.offsetLeft;
             const clickY = event.clientY - playGraoundWrapper.offsetTop;
-<<<<<<< HEAD
             // self.sprite.clickX = clickX;
             // self.sprite.clickY = clickY;
             // console.log({clickX, clickY});
@@ -180,12 +173,6 @@ export class AppComponent implements OnInit {
                 setTimeout(function () {
                     self.characters[i].setLocation(clickX, clickY);
                 }, (i * 100));
-=======
-            for (let i = 0 ; i < self.characters.length ; i++) {
-                setTimeout(function () {
-                    self.characters[i].setLocation(clickX, clickY);
-                }, (i * 500));
->>>>>>> eeaed51146f8091aa3d2cc2373323a4c41eccd99
             }
         });
 
