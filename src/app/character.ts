@@ -52,7 +52,6 @@ export class Character {
             const dx = self.sprite.x - self.sprite.clickX;
             const dy = self.sprite.y - self.sprite.clickY;
             if (Math.sqrt(dx * dx + dy * dy) > 5) {
-
                 if (self.sprite.clickX > self.sprite.x) {
                     self.sprite.rotation = 0;
                     self.sprite.x += self.sprite.vmax;
